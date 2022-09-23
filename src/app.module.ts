@@ -14,10 +14,12 @@ import { SessionsService } from './modules/sessions/sessions.service';
 import { UsersController } from './modules/users/users.controller';
 import { UsersModule } from './modules/users/users.module';
 import { UsersService } from './modules/users/users.service';
+import { NotificationsModule } from './providers/notifications.module';
 import { TypeOrmUsersRepository } from './repositories/implementations/TypeOrmUsersRepository';
 
 @Module({
   imports: [
+    NotificationsModule,
     TypeOrmModule.forRoot(typeormConfig),
     UsersModule,
     PostsModule,
